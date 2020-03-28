@@ -1,3 +1,4 @@
+import ActivityScreen from './ActivityScreen'
 import IntroductionScreen from './IntroductionScreen'
 import LocationScreen from './LocationScreen'
 import PrivacyScreen from './PrivacyScreen'
@@ -10,6 +11,7 @@ const screens = [
   PrivacyScreen,
   IntroductionScreen,
   LocationScreen,
+  ActivityScreen,
   UserStatsScreen,
   TimeSlotScreen,
   ProofOfRequestScreen

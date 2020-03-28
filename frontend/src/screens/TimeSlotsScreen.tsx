@@ -1,12 +1,11 @@
 import React from 'react'
 
 const TimeSlotsScreen = () => {
-  
   return (
-      <article id='content'>
+    <article id='content'>
         Time Slots
-      </article>
+    </article>
   )
-  }
+}
 
 export default TimeSlotsScreen
