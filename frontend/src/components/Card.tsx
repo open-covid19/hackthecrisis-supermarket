@@ -11,8 +11,6 @@ type Props = {
   image?: string;
   handleCardAction?: () => void;
   id?: string;
-  dynamic?: boolean;
-  component?: JSX.Element;
 }
 
 const Card = (props: Props) => {
@@ -21,7 +19,7 @@ const Card = (props: Props) => {
       {props.image && <Image floated="left" src={props.image} />}
       {props.title && <UICard.Header as='h1'>{props.title}</UICard.Header>}
       <UICard.Content>
-        {props.dynamic ? {props.component} : <UICard.Description as='p'>{props.message}</UICard.Description>}
+        <UICard.Description as='p'>{props.message}</UICard.Description>
       </UICard.Content>
       {props.handleCardAction && <Button onClick={props.handleCardAction} text={props.buttonText ? props.buttonText : 'OK'} />}
     </UICard>
