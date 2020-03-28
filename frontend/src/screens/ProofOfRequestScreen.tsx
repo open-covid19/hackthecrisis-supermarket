@@ -1,14 +1,14 @@
 import React from 'react'
 
 /**
- * Enable dismissal of PoR
+ * TODO: Enable dismissal of PoR & app reqest
  */
 
 const ProofOfRequestScreen = () => {
   return (
-      <article id='content'>
+    <article id='content'>
         Proof of Request
-      </article>
+    </article>
   )
 }
 
