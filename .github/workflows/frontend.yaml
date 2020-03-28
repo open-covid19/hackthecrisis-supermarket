@@ -1,0 +1,55 @@
+name: frontend
+on:
+  # every day
+  # schedule: 
+    # - cron: '0 0 * * *'
+  # or on push
+  push:
+    branches:
+    - master
+jobs:
+  build:
+    name: build
+    runs-on: ubuntu-latest
+    steps:
+    # checkout / setup
+    - uses: actions/checkout@v1
+    - uses: actions/setup-node@v1
+      with:
+        node-version: "12.x"
+    # caching -> faster
+    - uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: ${{ runner.os }}-node-${{ hashFiles('**/yarn.lock') }}
+        restore-keys: |
+          ${{ runner.os }}-node-
+    - run: yarn install
+      if: steps.cache.outputs.cache-hit != 'true'
+      working-directory: ./frontend/
+    # build artifact
+    - run: yarn build
+      working-directory: ./frontend/
+    - name: Archive Production Artifact
+      uses: actions/upload-artifact@master
+      with:
+        name: build
+        path: frontend/build
+  deploy:
+    name: Deploy
+    needs: build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@master
+      - name: Download Artifact
+        uses: actions/download-artifact@master
+        with:
+          name: build
+      - name: Deploy to Firebase
+        uses: w9jds/firebase-action@master
+        with:
+          args: deploy --only hosting
+        env:
+          FIREBASE_TOKEN: ${{ secrets.FIREBASE_TOKEN }}
+          PROJECT_PATH: frontend/
