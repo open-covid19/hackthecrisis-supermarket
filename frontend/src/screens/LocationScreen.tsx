@@ -1,4 +1,6 @@
 import React from 'react'
+import { Header } from 'semantic-ui-react'
+import { Card, Message } from '../components'
 
 /**
  * TODO
@@ -9,9 +11,14 @@ import React from 'react'
 
 const LocationScreen = () => {
   return (
-    <article id='content'>
-        Location
-    </article>
+    <div id="container">
+      <Header id="header" as="h1">Where are you located?</Header>
+      <Message id="message" message="Tell the people why they need to shop as local as possible" />
+      <Card
+        id="card"
+        message="{Here will come whatever we find for the location thingy}"
+      />
+    </div>
   )
 }
 

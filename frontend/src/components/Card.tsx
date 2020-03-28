@@ -5,22 +5,23 @@ import './Card.scss'
 import Button from './Button'
 
 type Props = {
-  title: string;
+  title?: string;
   message: string;
   buttonText?: string;
   image?: string;
-  handleCardAction: () => void;
+  handleCardAction?: () => void;
+  id?: string;
 }
 
 const Card = (props: Props) => {
   return (
-    <UICard className='card'>
+    <UICard id={props.id} className="card">
       {props.image && <Image floated="left" src={props.image} />}
-      <UICard.Header as='h1'>{props.title}</UICard.Header>
+      {props.title && <UICard.Header as='h1'>{props.title}</UICard.Header>}
       <UICard.Content>
         <UICard.Description as='p'>{props.message}</UICard.Description>
       </UICard.Content>
-      <Button onClick={props.handleCardAction} text={props.buttonText ? props.buttonText : 'OK'} />
+      {props.handleCardAction && <Button onClick={props.handleCardAction} text={props.buttonText ? props.buttonText : 'OK'} />}
     </UICard>
   )
 }

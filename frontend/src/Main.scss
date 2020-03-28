@@ -1,3 +1,23 @@
-.screen {
-  width: 100%;
+#content {
+  #container {
+    display: grid;
+  
+    grid-template-rows: .5fr .5fr 4fr;
+  
+    #header {
+      grid-row: 1 / 2;
+      font-size: 2rem;
+      padding: 1rem;
+      padding-top: 2rem;
+    }
+  
+    #message {
+      grid-row: 2 / 3;
+    }
+  
+    #card {
+      grid-row: 3 / 4;
+      align-self: flex-start;
+    }
+  }
 }

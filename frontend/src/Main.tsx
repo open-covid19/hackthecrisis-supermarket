@@ -2,6 +2,7 @@ import React from 'react'
 
 import screens from './screens'
 
+import './Main.scss'
 /**
  * 0. Is there a time slot still valid (cookie, local storage)? Show it.
  * 1. Has privacy policy been accepted? (cookie / local storage)
@@ -25,7 +26,9 @@ import screens from './screens'
 const Main = ({ pageIndex }: {pageIndex: number}) => {
   const Screen = screens[pageIndex]
   return (
-    <Screen />
+    <article id='content'>
+      <Screen />
+    </article>
   )
 }
 

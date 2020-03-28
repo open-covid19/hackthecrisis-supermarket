@@ -7,9 +7,9 @@ import React from 'react'
 
 const ActivityScreen = () => {
   return (
-    <article id='content'>
-        Activity
-    </article>
+    <p>
+       Activity
+    </p>
   )
 }
 

@@ -14,14 +14,15 @@ const IntroductionScreen = () => {
   const { showNext } = useContext(store)
 
   return (
-    <article id='content'>
+    <div id="container">
       <Card
+        id="card"
         title='{Introduction Screen Title 1}'
         buttonText='Accept'
         message="{How does the app help with the Covid-19 outbreak}"
-        handleCardAction={() => { return null }}
+        handleCardAction={() => showNext()}
       />
-    </article>
+    </div>
   )
 }
 

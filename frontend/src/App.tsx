@@ -19,10 +19,10 @@ function App () {
   const [buttonProps, setButtonProps] = useState<{ isVisible: boolean; orientation: ButtonOrientation}>(defaultButtonProps)
 
   useEffect(() => {
-    if (pageIndex === screens.length - 1) {
+    if (pageIndex === screens.length - 1 || pageIndex === 0 || pageIndex === 1) {
       setButtonProps({ ...buttonProps, isVisible: false })
     } else if (pageIndex === 2 || pageIndex === 5) {
-      setButtonProps({ ...buttonProps, orientation: ButtonOrientation.Down })
+      setButtonProps({ isVisible: true, orientation: ButtonOrientation.Down })
     } else {
       setButtonProps(defaultButtonProps)
     }
@@ -34,7 +34,7 @@ function App () {
     <store.Provider value={{ showNext, clientData: {} as request.clientData }}>
       <main className="App">
         <header>Spread the Queue</header>
-        <section className="App__content">
+        <section className="App__main">
           <Main pageIndex={pageIndex} />
         </section>
         <footer>
