@@ -1,6 +1,7 @@
 import Button from './Button'
 import Card from './Card'
+import IconButton from './IconButton'
 import Message from './Message'
-import StoreMapComponent from './StoreMapComponent'
+import Map from './Map'
 
-export { Button, Card, Message, StoreMapComponent }
+export { Button, Card, IconButton, Message, Map }

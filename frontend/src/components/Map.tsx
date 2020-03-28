@@ -2,7 +2,7 @@ import React, { useEffect } from 'react'
 import { initialize } from '../functions/google'
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps'
 
-const StoreMapComponent = withScriptjs(
+const Map = withScriptjs(
   withGoogleMap((props: any) => {
     useEffect(() => {
       initialize()
@@ -17,4 +17,4 @@ const StoreMapComponent = withScriptjs(
   })
 )
 
-export default StoreMapComponent
+export default Map

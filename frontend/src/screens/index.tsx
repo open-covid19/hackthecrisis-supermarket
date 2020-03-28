@@ -10,8 +10,8 @@ import UserStatsScreen from './UserStatsScreen'
 const screens = [
   IntroductionScreen,
   PrivacyScreen,
-  LocationScreen,
   ActivityScreen,
+  LocationScreen,
   UserStatsScreen,
   TimeSlotScreen,
   ProofOfRequestScreen
