@@ -1,16 +1,10 @@
-import React, { useContext } from 'react'
-import store from '../store'
+import React from 'react'
 
 const LocationScreen = () => {
-  const { showNext } = useContext(store)
-
   return (
-    <>
       <article id='content'>
         Location
       </article>
-      <button id='button' onClick={() => showNext()}>add</button>
-    </>
   )
 }
 

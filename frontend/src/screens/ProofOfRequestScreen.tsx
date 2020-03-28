@@ -6,11 +6,9 @@ import React from 'react'
 
 const ProofOfRequestScreen = () => {
   return (
-    <>
       <article id='content'>
         Proof of Request
       </article>
-    </>
   )
 }
 
