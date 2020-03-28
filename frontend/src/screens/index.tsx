@@ -8,8 +8,8 @@ import UserStatsScreen from './UserStatsScreen'
 
 // the order of the items in this array define the sequential flow of the app
 const screens = [
-  PrivacyScreen,
   IntroductionScreen,
+  PrivacyScreen,
   LocationScreen,
   ActivityScreen,
   UserStatsScreen,

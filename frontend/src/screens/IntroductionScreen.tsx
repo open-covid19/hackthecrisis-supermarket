@@ -1,4 +1,5 @@
 import React, { useContext } from 'react'
+import { Card } from '../components'
 import store from '../store'
 
 /**
@@ -13,12 +14,14 @@ const IntroductionScreen = () => {
   const { showNext } = useContext(store)
 
   return (
-    <>
-      <article id='content'>
-        Introduction and Disclaimer
-      </article>
-      <button id='button' onClick={() => showNext()}>add</button>
-    </>
+    <article id='content'>
+      <Card
+        title='{Introduction Screen Title 1}'
+        buttonText='Accept'
+        message="{How does the app help with the Covid-19 outbreak}"
+        handleCardAction={() => { return null }}
+      />
+    </article>
   )
 }
 
