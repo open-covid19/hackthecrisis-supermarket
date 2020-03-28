@@ -7,11 +7,11 @@ import './App.scss';
 function App() {
   return (
     <main className="App">
-      <header>Header</header>
+      <header>Spread the Queue</header>
       <section className="App__content">
         <Main />
       </section>
-      <footer>Footer</footer>
+      <footer>&nbsp;</footer>
     </main>
   );
 }

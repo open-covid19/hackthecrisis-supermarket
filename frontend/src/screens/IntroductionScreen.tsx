@@ -5,10 +5,12 @@ const IntroductionScreen = () => {
   const { showNext } = useContext(store)
   
   return (
-    <div>
-      Introduction and Disclaimer
-      <button onClick={() => showNext()}>add</button>
-    </div>
+    <>
+      <article id='content'>
+        Introduction and Disclaimer
+      </article>
+      <button id='button' onClick={() => showNext()}>add</button>
+    </>
   )
 }
 

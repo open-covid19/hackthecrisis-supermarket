@@ -5,10 +5,12 @@ const LocationScreen = () => {
   const { showNext } = useContext(store)
 
   return (
-    <div>
-      Location
-      <button onClick={() => showNext()}>add</button>
-    </div>
+    <>
+      <article id='content'>
+        Location
+      </article>
+      <button id='button' onClick={() => showNext()}>add</button>
+    </>
   )
 }
 

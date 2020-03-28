@@ -5,10 +5,12 @@ const PrivacyScreen = () => {
   const { showNext } = useContext(store)
   
   return (
-    <div>
-      Privacy
-      <button onClick={() => showNext()}>add</button>
-    </div>
+    <>
+      <article id='content'>
+        Privacy
+      </article>
+      <button id='button' onClick={() => showNext()}>add</button>
+    </>
   )
 }
 

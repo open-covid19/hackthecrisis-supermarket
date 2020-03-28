@@ -5,12 +5,13 @@ const TimeSlotsScreen = () => {
   const { showNext } = useContext(store)
   
   return (
-    <div>
-      Time Slots
-      <button onClick={() => showNext()}>add</button>
-
-    </div>
+    <>
+      <article id='content'>
+        Time Slots
+      </article>
+      <button id='button' onClick={() => showNext()}>add</button>
+    </>
   )
-}
+  }
 
 export default TimeSlotsScreen

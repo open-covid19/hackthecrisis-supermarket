@@ -5,10 +5,12 @@ const UserStatsScreen = () => {
   const { showNext } = useContext(store)
   
   return (
-    <div>
-      User Stats
-      <button onClick={() => showNext()}>add</button>
-    </div>
+    <>
+      <article id='content'>
+        User Stats
+      </article>
+      <button id='button' onClick={() => showNext()}>add</button>
+    </>
   )
 }
 
