@@ -1,4 +1,6 @@
 import React from 'react'
+import { Header } from 'semantic-ui-react'
+import { Message, Map } from '../components'
 
 /**
  * TODO
@@ -9,9 +11,17 @@ import React from 'react'
 
 const LocationScreen = () => {
   return (
-    <article id='content'>
-        Location
-    </article>
+    <div id="container">
+      <Header id="header" as="h1">Where are you located?</Header>
+      <Message id="message" message="Tell the people why they need to shop as local as possible" />
+      <Map
+        id="card"
+        googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCow4NONLwTfk6aJyDGYqExE9Y2YVOVm2I&v=3.exp&libraries=geometry,drawing,places"
+        loadingElement={<div style={{ height: '100%' }} />}
+        containerElement={<div id="map" style={{ height: '400px' }} />}
+        mapElement={<div style={{ height: '100%' }} />}
+      />
+    </div>
   )
 }
 

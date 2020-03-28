@@ -1,11 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { Card } from '../components'
+import store from '../store'
 
 const PrivacyScreen = () => {
-  
+  const { showNext } = useContext(store)
+
   return (
-      <article id='content'>
-        Privacy
-      </article>
+    <div id="container">
+      <Card
+        id="card"
+        title='{Privacy Disclaimer Title}'
+        buttonText='Accept'
+        message="{Privacy Disclaimer Message}"
+        handleCardAction={() => showNext()}
+      />
+    </div>
   )
 }
 
