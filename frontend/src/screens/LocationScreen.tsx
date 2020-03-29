@@ -12,8 +12,12 @@ import { Message, Map } from '../components'
 const LocationScreen = () => {
   return (
     <div id="container">
-      <Header id="header" as="h1">Where are you located?</Header>
-      <Message id="message" message="Tell the people why they need to shop as local as possible" />
+      <Header id="header" as="h1">Where are you? </Header>
+      <Message id="message" message="
+                                     <p>For best results please try to be as accurate as possible. By using this app you are contributing to the reduction of overcrowding of our public spaces. </p>
+<p>By choosing locations close to you, you are minimising the movement of people, and reducing the spread of the pandemic. </p>
+<p>We understand that you may want to go to your favourite shop in another neighbourhood but our suggestions are optimised to minimise the spread of the virus, and who knows? Our suggestion might just become your new favourite shop. </p>
+" />
       <Map
         id="card"
         googleMapURL="https://maps.googleapis.com/maps/api/js?key=AIzaSyCow4NONLwTfk6aJyDGYqExE9Y2YVOVm2I&v=3.exp&libraries=geometry,drawing,places"

@@ -18,7 +18,7 @@ const ActivityScreen = () => {
 
   return (
     <div id="container">
-      <Header id="header" as="h1">What do you need?</Header>
+      <Header id="header" as="h1">Where would you like to go?</Header>
       <div id="card">
         {activities.map((activity, index) => {
           // @ts-ignore
