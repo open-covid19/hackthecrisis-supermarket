@@ -6,6 +6,7 @@ import screens from './screens'
 import { request } from './models'
 import icons from './assets/icons'
 import { startupCheck } from './utils'
+import { data } from './data/storage'
 
 import './App.scss'
 
@@ -18,7 +19,7 @@ function App () {
   const [pageIndex, setPageIndex] = useState<number>(0)
   const defaultButtonProps = { isVisible: false, orientation: ButtonOrientation.Right }
   const [buttonProps, setButtonProps] = useState<{ isVisible: boolean; orientation: ButtonOrientation}>(defaultButtonProps)
-  const [clientData, setClientData] = useState<request.clientData>({} as request.clientData)
+  const [clientData, setClientData] = useState<request.clientData>(data)
 
   useEffect(() => {
     const stored = startupCheck()
@@ -40,7 +41,9 @@ function App () {
     }
   }, [pageIndex])
 
-  const goToNextPage = (index?: number) => setPageIndex(index || pageIndex + 1)
+  const goToNextPage = (index?: number) => {
+    setPageIndex(index !== undefined ? index : (pageIndex + 1))
+  }
 
   return (
     <store.Provider value={{ goToNextPage, clientData, setClientData }}>

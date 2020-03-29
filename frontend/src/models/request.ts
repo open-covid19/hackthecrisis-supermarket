@@ -3,7 +3,7 @@ export type clientData = {
   showIntro: boolean;
   location: string;
   userInfo: UserInfo;
-  venue: VenueInfo | {};
+  venue: VenueInfo;
   timeslot: TimeSlot | {};
   voucher: VoucherInfo[];
   activity: string;

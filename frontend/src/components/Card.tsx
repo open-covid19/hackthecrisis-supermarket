@@ -6,6 +6,7 @@ import Button from './Button'
 
 type Props = {
   title?: string;
+  subTitle?: string;
   message?: string;
   children?: any;
   buttonText?: string;
@@ -18,7 +19,10 @@ const Card = (props: Props) => {
   return (
     <UICard id={props.id} className="card">
       {props.image && <Image floated="left" src={props.image} />}
-      {props.title && <UICard.Header as='h1'>{props.title}</UICard.Header>}
+      {props.title && <UICard.Header>
+        <h1>{props.title}</h1>
+        {props.subTitle && <span className="subtitle">{props.subTitle}</span>}
+      </UICard.Header>}
       <UICard.Content>
         <UICard.Description>{props.children}</UICard.Description>
       </UICard.Content>
