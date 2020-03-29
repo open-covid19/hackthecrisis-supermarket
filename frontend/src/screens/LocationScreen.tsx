@@ -12,7 +12,7 @@ import { Message, Map } from '../components'
 const LocationScreen = () => {
   return (
     <div id="container">
-      <Header id="header" as="h1">Where are you located?</Header>
+      <Header id="header" as="h1">Where would you like to go? </Header>
       <Message id="message" message="Tell the people why they need to shop as local as possible" />
       <Map
         id="card"
