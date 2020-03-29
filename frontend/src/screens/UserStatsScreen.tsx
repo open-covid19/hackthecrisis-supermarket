@@ -15,7 +15,9 @@ const UserStatsScreen = () => {
   return (
     <div id="container">
       <Header id="header" as="h1">About yourself</Header>
-      <Message id="message" message="The location you chose allows for preferential treatment based on some individual characteristics. Please specify below whether those apply to you." />
+      <Message id="message" message="<p>The following details aim to personalise your suggested timeslot based on your personal circumstances. </p>
+<p>Please try to be as honest as possible. Our algorithm, and chances of ending the pandemic, relies on trust. </p>
+" />
       <List
         id="card"
         items={items}

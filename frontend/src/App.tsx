@@ -17,7 +17,7 @@ enum ButtonOrientation {
 
 function App () {
   const [pageIndex, setPageIndex] = useState<number>(0)
-  const defaultButtonProps = { isVisible: true, orientation: ButtonOrientation.Right }
+  const defaultButtonProps = { isVisible: false, orientation: ButtonOrientation.Right }
   const [buttonProps, setButtonProps] = useState<{ isVisible: boolean; orientation: ButtonOrientation}>(defaultButtonProps)
   const [clientData, setClientData] = useState<request.clientData>(data)
 
@@ -36,10 +36,8 @@ function App () {
   }, [clientData])
 
   useEffect(() => {
-    if (pageIndex === screens.length - 1 || pageIndex === 0 || pageIndex === 1) {
-      setButtonProps({ ...buttonProps, isVisible: false })
-    } else if (pageIndex === 5) {
-      setButtonProps({ isVisible: true, orientation: ButtonOrientation.Down })
+    if (pageIndex === 3 || pageIndex === 4) {
+      setButtonProps({ ...buttonProps, isVisible: true })
     } else {
       setButtonProps(defaultButtonProps)
     }

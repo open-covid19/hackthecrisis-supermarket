@@ -1,21 +1,24 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Header } from 'semantic-ui-react'
-import { Message, List } from '../components'
+import { List } from '../components'
+import store from '../store'
 
 const TimeSlotsScreen = () => {
+  const { showNext } = useContext(store)
+
   const items = [
-    { message: 'Are you over 50 years old?', buttonType: 'toggle' },
-    { message: 'Are you employed in the care sector?', buttonType: 'toggle' },
-    { message: 'Are you employed in the medical sector?', buttonType: 'toggle' }
+    { message: 'Time slot 1' },
+    { message: 'Time slot 2' },
+    { message: 'Time slot 3' }
   ]
   return (
     <div id="container">
-      <Header id="header" as="h1">About yourself</Header>
-      <Message id="message" message="The location you chose allows for preferential treatment based on some individual characteristics. Please specify below whether those apply to you." />
+      <Header id="header" as="h1">Available time slots</Header>
       <List
         clickable
         id="card"
         items={items}
+        onClick={() => showNext()}
       />
     </div>
   )

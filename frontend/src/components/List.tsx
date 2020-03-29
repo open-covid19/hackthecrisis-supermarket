@@ -7,6 +7,7 @@ type Props = {
   clickable?: boolean;
   items: Item[];
   id: string;
+  onClick?: () => void;
 }
 
 type Item = {
@@ -15,32 +16,27 @@ type Item = {
 }
 
 const List = (props: Props) => {
-  if (!props.clickable) {
-    return (
-      <ul id={props.id} className='list'>
-        {props.items.map((item, index) => {
+  return (
+    <ul id={props.id} className='list'>
+      {props.clickable
+        ? props.items.map((item, index) => {
+          return (
+            <li key={index} className='list__item list__item--non-clickable'>
+              <button onClick={props.onClick}>{item.message}</button>
+            </li>
+          )
+        })
+        : props.items.map((item, index) => {
           return (
             <li key={index} className='list__item list__item--clickable'>
               {item.message}
               <Checkbox toggle />
             </li>
           )
-        })}
-      </ul>
-    )
-  } else {
-    return (
-      <ul id={props.id} className='list'>
-        {props.items.map((item, index) => {
-          return (
-            <li key={index} className='list__item list__item--non-clickable'>
-              <button>{item.message}</button>
-            </li>
-          )
-        })}
-      </ul>
-    )
-  }
+        })
+      }
+    </ul>
+  )
 }
 
 export default List

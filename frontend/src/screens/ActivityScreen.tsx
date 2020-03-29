@@ -1,7 +1,8 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Header } from 'semantic-ui-react'
 import { IconButton } from '../components'
 import icons from '../assets/icons'
+import store from '../store'
 
 /**
  * TODO
@@ -9,6 +10,8 @@ import icons from '../assets/icons'
  */
 
 const ActivityScreen = () => {
+  const { showNext } = useContext(store)
+
   const activities = [
     { label: 'Shop', icon: icons.shoppingcart },
     { label: 'Walk', icon: icons.park },
@@ -18,11 +21,11 @@ const ActivityScreen = () => {
 
   return (
     <div id="container">
-      <Header id="header" as="h1">What do you need?</Header>
+      <Header id="header" as="h1">Where would you like to go?</Header>
       <div id="card">
         {activities.map((activity, index) => {
           // @ts-ignore
-          return <IconButton onClick={() => alert(activities[index])} key={index} icon={activity.icon} label={activity.label} />
+          return <IconButton onClick={() => showNext()} key={index} icon={activity.icon} label={activity.label} />
         })}
       </div>
     </div>
