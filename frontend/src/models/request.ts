@@ -6,6 +6,7 @@ export type clientData = {
   venue: VenueInfo | {};
   timeslot: TimeSlot | {};
   voucher: VoucherInfo[];
+  activity: string;
 }
 
 export type UserInfo = {

@@ -7,11 +7,11 @@ type Props = {
   clickable?: boolean;
   items: Item[];
   id: string;
-  onClick?: () => void;
+  onClick?: (i: number) => void;
 }
 
 type Item = {
-  message: string;
+  value: string;
   buttonType?: string;
 }
 
@@ -21,15 +21,15 @@ const List = (props: Props) => {
       {props.clickable
         ? props.items.map((item, index) => {
           return (
-            <li key={index} className='list__item list__item--non-clickable'>
-              <button onClick={props.onClick}>{item.message}</button>
+            <li onClick={() => props.onClick && props.onClick(index)} key={index} className='list__item list__item--non-clickable'>
+              <button >{item.value}</button>
             </li>
           )
         })
         : props.items.map((item, index) => {
           return (
             <li key={index} className='list__item list__item--clickable'>
-              {item.message}
+              {item.value}
               <Checkbox toggle />
             </li>
           )

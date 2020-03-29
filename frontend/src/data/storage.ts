@@ -4,6 +4,7 @@ const data: request.clientData = {
   showPrivacy: true,
   showIntro: true,
   location: '',
+  activity: '',
   userInfo: {},
   venue: {},
   timeslot: {},

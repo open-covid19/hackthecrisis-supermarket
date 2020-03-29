@@ -26,6 +26,17 @@
         background-color: transparent;
         border: none;
       }
+
+      &:hover {
+        background-color: rgba(40, 140, 204, .75);
+        color: rgb(213, 218, 231);
+        transform: scaleX(1.005);
+      }
+    
+      &:active {
+        color: transparent;
+        background-color: transparent;
+      }
     }
 
     &--clickable {

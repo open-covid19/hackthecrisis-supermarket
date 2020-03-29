@@ -13,7 +13,7 @@ const ProofOfRequestScreen = () => {
         id="card"
         title='Your alloted time slots'
       >
-        {getRandomSlot()}
+        nothing to see here
       </Card>
     </div>
   )

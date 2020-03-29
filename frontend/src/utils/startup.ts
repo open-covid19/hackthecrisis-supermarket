@@ -8,7 +8,7 @@ export default () => {
     stored = { ...stored, [`${key}`]: storageUtils.getItem(key) }
   })
 
-  if (stored.voucher.length) {
+  if (stored.voucher?.length) {
     stored.voucher.map((element, index) => {
       if (isAfter(new Date(), new Date(element.date))) {
         storageUtils.removeVoucher(index)
