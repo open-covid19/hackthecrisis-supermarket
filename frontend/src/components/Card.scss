@@ -13,13 +13,14 @@
     padding-bottom: .5rem;
     border-bottom: .5px solid;
     margin-bottom: .5rem;
-    align-self: center;
+    text-align: center;
   }
 
   .content {
       grid-row: 2 / 3;
       height: 100%;
       padding: 1rem;
+      overflow: hidden;
   }
 
   .button {
