@@ -20,7 +20,7 @@ const Card = (props: Props) => {
       {props.image && <Image floated="left" src={props.image} />}
       {props.title && <UICard.Header as='h1'>{props.title}</UICard.Header>}
       <UICard.Content>
-        <UICard.Description as='p'>{props.children}</UICard.Description>
+        <UICard.Description>{props.children}</UICard.Description>
       </UICard.Content>
       {props.handleCardAction && <Button onClick={props.handleCardAction} text={props.buttonText ? props.buttonText : 'OK'} />}
     </UICard>
