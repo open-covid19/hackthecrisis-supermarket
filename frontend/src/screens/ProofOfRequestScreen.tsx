@@ -1,5 +1,6 @@
 import React from 'react'
 import { Card } from '../components'
+import { getRandomSlot } from '../functions/weights'
 
 /**
  * TODO: Enable dismissal of PoR & app reqest
@@ -12,7 +13,7 @@ const ProofOfRequestScreen = () => {
         id="card"
         title='Your alloted time slots'
       >
-        to be filled with useful information
+        {getRandomSlot()}
       </Card>
     </div>
   )
