@@ -9,6 +9,7 @@
       font-size: 2rem;
       padding: 1rem;
       padding-top: 2rem;
+      justify-self: center;
     }
   
     #message {
@@ -18,6 +19,7 @@
     #card {
       grid-row: 3 / 4;
       align-self: flex-start;
+      justify-self: center;
     }
   }
 }

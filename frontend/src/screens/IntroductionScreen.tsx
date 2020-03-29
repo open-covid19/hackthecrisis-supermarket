@@ -1,6 +1,6 @@
-import React, { useContext } from "react";
-import { Card } from "../components";
-import store from "../store";
+import React, { useContext } from 'react'
+import { Card } from '../components'
+import store from '../store'
 
 /**
  * TODO
@@ -11,7 +11,7 @@ import store from "../store";
  */
 
 const IntroductionScreen = () => {
-  const { showNext } = useContext(store);
+  const { showNext } = useContext(store)
 
   return (
     <div id="container">
@@ -39,7 +39,7 @@ const IntroductionScreen = () => {
         </div>
       </Card>
     </div>
-  );
-};
+  )
+}
 
-export default IntroductionScreen;
+export default IntroductionScreen
