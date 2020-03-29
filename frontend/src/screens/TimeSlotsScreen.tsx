@@ -23,7 +23,7 @@ const TimeSlotsScreen = () => {
 
   const handleSelection = (index: number) => {
     const voucher: request.VoucherInfo = {
-      date: dateStrings[index], venueName: clientData.venue.venueName, venueLocation: clientData.venue.venueLocation
+      date: items[index].time, venueName: clientData.venue.venueName, venueLocation: clientData.venue.venueLocation
     }
 
     storageUtils.setItem(storage.Key.Voucher, voucher)

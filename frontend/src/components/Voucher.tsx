@@ -18,7 +18,7 @@ const Voucher = (props: Props) => {
           <img src={icons.location} />
           {props.voucher.venueLocation}
         </span>
-        <span className="voucher__content--time">{props.voucher.date.split('T')[1]}</span>
+        <span className="voucher__content--time">{props.voucher.date}</span>
       </div>
       <button onClick={() => props.handleDelete(props.index)}><img src={icons.delete} /></button>
     </section>
