@@ -5,4 +5,15 @@
   background-color: transparent;
   margin-top: 2rem;
   color: #288CCC;
+
+  &:hover {
+    background-color: rgba(40, 140, 204, .75);
+    color: rgb(213, 218, 231);
+    transform: scaleX(1.005);
+  }
+
+  &:active {
+    color: transparent;
+    background-color: transparent;
+  }
 }

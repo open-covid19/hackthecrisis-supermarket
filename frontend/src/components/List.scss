@@ -1,6 +1,14 @@
 .list {
   justify-self: center;
 
+      ul, li {
+        list-style: none;
+    }
+
+    li {
+        margin-left: -3rem;
+    }
+
   &__item {
     width: 100%;
     display: flex;
@@ -22,6 +30,7 @@
 
     &--clickable {
     justify-content: space-between;
+
 
     /*!
  * # Semantic UI 2.4.1 - Checkbox
