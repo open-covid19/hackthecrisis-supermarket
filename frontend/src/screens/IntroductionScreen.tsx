@@ -1,6 +1,6 @@
-import React, { useContext } from 'react'
-import { Card } from '../components'
-import store from '../store'
+import React, { useContext } from "react";
+import { Card } from "../components";
+import store from "../store";
 
 /**
  * TODO
@@ -11,32 +11,35 @@ import store from '../store'
  */
 
 const IntroductionScreen = () => {
-  const { showNext } = useContext(store)
+  const { showNext } = useContext(store);
 
   return (
     <div id="container">
       <Card
         id="card"
-        title='{Wlecome to Spread The Queue 1}'
-        buttonText='Accept'
-        message="{By using this app you are helping to reduce overcrowding in public spaces
-                 
-The app will use your details to suggest optimal times to visit public spaces
-                 
-The timeslots are allocated as fairly as possible
-                 
-By sticking to your suggested timeslots you will be: 
-                 
--	Helping to reduce overcrowding in public spaces 
--	Reducing the spread of the virus
--	Reduce queuing time
--	Improving the working environment for public sector workers (including supermarket employees) 
-                 
-By working together we can reduce the duration of the pandemic}"
+        title="{Wlecome to Spread The Queue 1}"
+        buttonText="Accept"
         handleCardAction={() => showNext()}
-      />
+      >
+        <div>
+          <p>By using this app you are helping to reduce overcrowding in public spaces</p>
+          <p>The app will use your details to suggest optimal times to visit public spaces</p>
+          <p>The timeslots are allocated as fairly as possible</p>
+          <p>By sticking to your suggested timeslots you will be:</p>
+          <ul>
+            <li>Helping to reduce overcrowding in public spaces</li>
+            <li>Reducing the spread of the virus</li>
+            <li>Reduce queuing time</li>
+            <li>
+              Improving the working environment for public sector workers (including supermarket
+              employees)
+            </li>
+          </ul>
+          <p>By working together we can reduce the duration of the pandemic</p>
+        </div>
+      </Card>
     </div>
-  )
-}
+  );
+};
 
-export default IntroductionScreen
+export default IntroductionScreen;
