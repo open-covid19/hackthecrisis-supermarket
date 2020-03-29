@@ -48,3 +48,7 @@ export function sample_from(weights:any) {
     let chosen = cumul.filter((c: any) => c.c_weight > r)[0]
     return chosen.t
 }
+
+export function getRandomSlot(){
+	return sample_from(times)
+}
