@@ -9,7 +9,7 @@ type Props = {
 }
 const Message = (props: Props) => {
   return (
-    <UIMessage compact id={props.id} className="message">
+    <UIMessage id={props.id} className="message">
       <p>{props.message}</p>
     </UIMessage>
   )

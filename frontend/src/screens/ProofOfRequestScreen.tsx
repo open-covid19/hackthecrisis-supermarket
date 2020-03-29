@@ -1,4 +1,5 @@
 import React from 'react'
+import { Card } from '../components'
 
 /**
  * TODO: Enable dismissal of PoR & app reqest
@@ -6,9 +7,13 @@ import React from 'react'
 
 const ProofOfRequestScreen = () => {
   return (
-    <p>
-        Proof of Request
-    </p>
+    <div id="container">
+      <Card
+        id="card"
+        title='Your alloted time slots'
+        message="{to be filled with useful information"
+      />
+    </div>
   )
 }
 
