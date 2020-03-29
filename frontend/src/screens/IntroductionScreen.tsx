@@ -17,7 +17,7 @@ const IntroductionScreen = () => {
     <div id="container">
       <Card
         id="card"
-        title="{Wlecome to Spread The Queue 1}"
+        title="Welcome to Spread The Queue"
         buttonText="Accept"
         handleCardAction={() => showNext()}
       >

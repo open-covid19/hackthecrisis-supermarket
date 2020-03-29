@@ -11,8 +11,9 @@ const ProofOfRequestScreen = () => {
       <Card
         id="card"
         title='Your alloted time slots'
-        message="{to be filled with useful information"
-      />
+      >
+        to be filled with useful information
+      </Card>
     </div>
   )
 }

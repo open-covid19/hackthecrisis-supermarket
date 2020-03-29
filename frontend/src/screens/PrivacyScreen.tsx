@@ -11,9 +11,8 @@ const PrivacyScreen = () => {
         id="card"
         title='{Privacy Disclaimer Title}'
         buttonText='Accept'
-        message="{Privacy Disclaimer Message}"
         handleCardAction={() => showNext()}
-      />
+      >Privacy Disclaimer Message</Card>
     </div>
   )
 }
