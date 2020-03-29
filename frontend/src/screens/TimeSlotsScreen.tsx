@@ -1,8 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Header } from 'semantic-ui-react'
-import { Message, List } from '../components'
+import { List } from '../components'
+import store from '../store'
 
 const TimeSlotsScreen = () => {
+  const { showNext } = useContext(store)
+
   const items = [
     { message: 'Time slot 1' },
     { message: 'Time slot 2' },
@@ -15,6 +18,7 @@ const TimeSlotsScreen = () => {
         clickable
         id="card"
         items={items}
+        onClick={() => showNext()}
       />
     </div>
   )
