@@ -4,7 +4,9 @@ const icons = {
   shoppingcart: require('./shoppingcart.svg'),
   park: require('./park.svg'),
   medicine: require('./hospital.svg'),
-  restaurant: require('./restaurant.svg')
+  restaurant: require('./restaurant.svg'),
+  location: require('./location.svg'),
+  delete: require('./delete.svg')
 }
 
 export default icons

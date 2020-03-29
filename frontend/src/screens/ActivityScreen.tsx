@@ -10,7 +10,7 @@ import store from '../store'
  */
 
 const ActivityScreen = () => {
-  const { showNext } = useContext(store)
+  const { goToNextPage, clientData, setClientData } = useContext(store)
 
   const activities = [
     { label: 'Shop', icon: icons.shoppingcart },
@@ -19,13 +19,18 @@ const ActivityScreen = () => {
     { label: 'Food', icon: icons.restaurant }
   ]
 
+  const handleSelection = (activity: string) => {
+    setClientData({ ...clientData, activity })
+    goToNextPage()
+  }
+
   return (
     <div id="container">
       <Header id="header" as="h1">Where would you like to go?</Header>
       <div id="card">
         {activities.map((activity, index) => {
           // @ts-ignore
-          return <IconButton onClick={() => showNext()} key={index} icon={activity.icon} label={activity.label} />
+          return <IconButton onClick={() => handleSelection(activity.label)} key={index} icon={activity.icon} label={activity.label} />
         })}
       </div>
     </div>

@@ -1,6 +1,8 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { Card } from '../components'
 import store from '../store'
+import { storageUtils } from '../utils'
+import { storage } from '../models'
 
 /**
  * TODO
@@ -11,15 +13,24 @@ import store from '../store'
  */
 
 const IntroductionScreen = () => {
-  const { showNext } = useContext(store)
+  const { goToNextPage } = useContext(store)
 
+  useEffect(() => {
+    const showIntro = storageUtils.getItem(storage.Key.ShowIntro)
+    if (showIntro) goToNextPage()
+  }, [])
+
+  const handleAccept = () => {
+    storageUtils.setItem(storage.Key.ShowIntro, 'false')
+    goToNextPage()
+  }
   return (
     <div id="container">
       <Card
         id="card"
         title="Welcome to Spread The Queue"
         buttonText="Accept"
-        handleCardAction={() => showNext()}
+        handleCardAction={() => handleAccept()}
       >
         <div>
           <p>By using this app you are helping to reduce overcrowding in public spaces</p>

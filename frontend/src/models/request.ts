@@ -3,10 +3,25 @@ export type clientData = {
   showIntro: boolean;
   location: string;
   userInfo: UserInfo;
-  venue: string;
-  timeslot: Date;
+  venue: VenueInfo;
+  timeslot: TimeSlot | {};
+  voucher: VoucherInfo[];
+  activity: string;
 }
 
 export type UserInfo = {
-  age: number;
+  age?: number;
+  care?: boolean;
+  health?: boolean;
 }
+
+export type VenueInfo = {
+  venueName: string;
+  venueLocation: string;
+}
+
+export type TimeSlot = {
+  date: string;
+}
+
+export interface VoucherInfo extends VenueInfo, TimeSlot {}
