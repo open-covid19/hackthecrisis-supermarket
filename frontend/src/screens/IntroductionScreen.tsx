@@ -17,9 +17,22 @@ const IntroductionScreen = () => {
     <div id="container">
       <Card
         id="card"
-        title='{Introduction Screen Title 1}'
+        title='{Wlecome to Spread The Queue 1}'
         buttonText='Accept'
-        message="{How does the app help with the Covid-19 outbreak}"
+        message="{By using this app you are helping to reduce overcrowding in public spaces
+                 
+The app will use your details to suggest optimal times to visit public spaces
+                 
+The timeslots are allocated as fairly as possible
+                 
+By sticking to your suggested timeslots you will be: 
+                 
+-	Helping to reduce overcrowding in public spaces 
+-	Reducing the spread of the virus
+-	Reduce queuing time
+-	Improving the working environment for public sector workers (including supermarket employees) 
+                 
+By working together we can reduce the duration of the pandemic}"
         handleCardAction={() => showNext()}
       />
     </div>
