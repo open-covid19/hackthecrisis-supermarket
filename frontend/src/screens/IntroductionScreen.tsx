@@ -25,7 +25,7 @@ const IntroductionScreen = () => {
     goToNextPage()
   }
   return (
-    <div id="container">
+    <article id="container">
       <Card
         id="card"
         title="Welcome to Spread The Queue"
@@ -49,7 +49,7 @@ const IntroductionScreen = () => {
           <p>By working together we can reduce the duration of the pandemic</p>
         </div>
       </Card>
-    </div>
+    </article>
   )
 }
 

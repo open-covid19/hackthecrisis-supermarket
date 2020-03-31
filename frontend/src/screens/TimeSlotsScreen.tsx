@@ -31,7 +31,7 @@ const TimeSlotsScreen = () => {
   }
 
   return (
-    <div id="container">
+    <article id="container">
       <Header id="header" as="h1">Most appropriate time slots</Header>
       <List
         clickable
@@ -39,7 +39,7 @@ const TimeSlotsScreen = () => {
         items={items}
         onClick={(i: number) => handleSelection(i)}
       />
-    </div>
+    </article>
   )
 }
 

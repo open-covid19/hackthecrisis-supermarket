@@ -6,10 +6,11 @@ import './Button.scss'
 type Props = {
   text: string;
   onClick: () => void;
+  name?: string;
 }
 const Button = (props: Props) => {
   return (
-    <UIButton className='button' onClick={() => props.onClick()}>
+    <UIButton className={`button ${props.name}`} onClick={() => props.onClick()}>
       {props.text}
     </UIButton>
   )

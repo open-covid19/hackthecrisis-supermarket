@@ -26,9 +26,7 @@ import './Main.scss'
 const Main = ({ pageIndex }: {pageIndex: number}) => {
   const Screen = screens[pageIndex]
   return (
-    <article id='content'>
-      <Screen />
-    </article>
+    <Screen />
   )
 }
 

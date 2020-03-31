@@ -1,36 +1,53 @@
 .card {
-  align-self: center;
-  border: 1px solid currentColor;
-  padding: 2rem;
-  min-height: 40vh;
-  width: 60vw;
-  border-radius: 1rem;
-  display: grid;
-  grid-template-rows: 1fr 3fr 1fr;
+  position: relative;
 
-  .header {
-    grid-row: 1 / 2;
-    font-size: 1.5rem;
-    padding-bottom: .5rem;
-    border-bottom: .5px solid;
-    margin-bottom: .5rem;
-    text-align: center;
-
-    .subtitle {
-      font-size: 1.2rem;
-      color: rgba(87, 145, 162, .91)
+  &__container {
+    border: 1px solid var(--main-color);
+    padding: 2rem;
+    height: 40vh;
+    border-radius: 1rem;
+    border-bottom-left-radius: 0rem;
+    border-bottom-right-radius: 0rem;
+    display: grid;
+    grid-template-rows: 1fr 4fr;
+    margin-bottom: 2.5rem;
+    overflow: scroll;
+  
+  
+    .header {
+      grid-row: 1 / 2;
+      font-size: 1.5rem;
+      padding-bottom: .5rem;
+      border-bottom: .5px solid;
+      margin-bottom: .5rem;
+      text-align: center;
+  
+      .subtitle {
+        font-size: 1.2rem;
+        color: rgba(87, 145, 162, .91)
+      }
+    }
+  
+    .content {
+        grid-row: 2 / 3;
+        height: 100%;
+        padding: 1rem;
+        overflow: hidden;
     }
   }
+  
+  &__button {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    border-radius: 1rem;
+    
 
-  .content {
-      grid-row: 2 / 3;
-      height: 100%;
-      padding: 1rem;
-      overflow: hidden;
+    .button {
+      width: 100%;
+    }
   }
-
-  .button {
-    grid-row: 3 / 4;
-  }
-
 }

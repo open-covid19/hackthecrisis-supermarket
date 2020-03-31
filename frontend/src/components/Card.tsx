@@ -1,8 +1,8 @@
 import React from 'react'
-import { Card as UICard, Image } from 'semantic-ui-react'
+
+import Button from './Button'
 
 import './Card.scss'
-import Button from './Button'
 
 type Props = {
   title?: string;
@@ -17,17 +17,19 @@ type Props = {
 
 const Card = (props: Props) => {
   return (
-    <UICard id={props.id} className="card">
-      {props.image && <Image floated="left" src={props.image} />}
-      {props.title && <UICard.Header>
-        <h1>{props.title}</h1>
-        {props.subTitle && <span className="subtitle">{props.subTitle}</span>}
-      </UICard.Header>}
-      <UICard.Content>
-        <UICard.Description>{props.children}</UICard.Description>
-      </UICard.Content>
-      {props.handleCardAction && <Button onClick={props.handleCardAction} text={props.buttonText ? props.buttonText : 'OK'} />}
-    </UICard>
+    <div id={props.id} className="card">
+      <div className="card__container">
+        {props.image && <img src={props.image} />}
+        {props.title && <div>
+          <h1>{props.title}</h1>
+          {props.subTitle && <span className="subtitle">{props.subTitle}</span>}
+        </div>}
+        <div>
+          {props.children}
+        </div>
+      </div>
+      {props.handleCardAction && <div className='card__button'><Button onClick={props.handleCardAction} text={props.buttonText ? props.buttonText : 'OK'} /></div>}
+    </div>
   )
 }
 

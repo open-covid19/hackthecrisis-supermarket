@@ -11,7 +11,7 @@ import { Message, Map } from '../components'
 
 const LocationScreen = () => {
   return (
-    <div id="container">
+    <article id="container">
       <Header id="header" as="h1">Where are you? </Header>
       <Message id="message" message="
                                      <p>For best results please try to be as accurate as possible. By using this app you are contributing to the reduction of overcrowding of our public spaces. </p>
@@ -25,7 +25,7 @@ const LocationScreen = () => {
         containerElement={<div id="map" style={{ height: '400px' }} />}
         mapElement={<div style={{ height: '100%' }} />}
       />
-    </div>
+    </article>
   )
 }
 

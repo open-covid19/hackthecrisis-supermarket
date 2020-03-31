@@ -1,10 +1,16 @@
-#content {
   #container {
     display: grid;
+    height: inherit;
   
-    grid-template-rows: .5fr .5fr 4fr;
+    grid-template-areas: 
+      "header"
+      "message"
+      "card"
+      ".";
+    grid-template-rows: 1fr auto  6fr .5fr;
   
     #header {
+      grid-area: header;
       grid-row: 1 / 2;
       font-size: 2rem;
       padding: 1rem;
@@ -13,13 +19,14 @@
     }
   
     #message {
+      grid-area: message;
       grid-row: 2 / 3;
     }
   
     #card {
+      grid-area: card;
       grid-row: 3 / 4;
       align-self: flex-start;
       justify-self: center;
     }
   }
-}

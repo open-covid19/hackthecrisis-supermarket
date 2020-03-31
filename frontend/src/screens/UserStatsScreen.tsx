@@ -9,7 +9,7 @@ const UserStatsScreen = () => {
     { value: 'Are you employed in the medical sector?' }
   ]
   return (
-    <div id="container">
+    <article id="container">
       <Header id="header" as="h1">About yourself</Header>
       <Message id="message" message="<p>The following details aim to personalise your suggested timeslot based on your personal circumstances. </p>
 <p>Please try to be as honest as possible. Our algorithm, and chances of ending the pandemic, relies on trust. </p>
@@ -18,7 +18,7 @@ const UserStatsScreen = () => {
         id="card"
         items={items}
       />
-    </div>
+    </article>
   )
 }
 

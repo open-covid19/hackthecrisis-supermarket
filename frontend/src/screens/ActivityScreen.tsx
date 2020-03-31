@@ -25,7 +25,7 @@ const ActivityScreen = () => {
   }
 
   return (
-    <div id="container">
+    <article id="container">
       <Header id="header" as="h1">Where would you like to go?</Header>
       <div id="card">
         {activities.map((activity, index) => {
@@ -33,7 +33,7 @@ const ActivityScreen = () => {
           return <IconButton onClick={() => handleSelection(activity.label)} key={index} icon={activity.icon} label={activity.label} />
         })}
       </div>
-    </div>
+    </article>
   )
 }
 

@@ -94,7 +94,7 @@ const PrivacyScreen = () => {
   }
 
   return (
-    <div id="container">
+    <article id="container">
       <Card
         id="card"
         title="Privacy Policy - We never store sensitive personal information"
@@ -105,7 +105,7 @@ const PrivacyScreen = () => {
           {pages[pageIndex]}
         </div>
       </Card>
-    </div>
+    </article>
   )
 }
 

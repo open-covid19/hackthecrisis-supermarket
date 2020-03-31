@@ -21,7 +21,7 @@ const ProofOfRequestScreen = () => {
   }
 
   return (
-    <div id="container">
+    <article id="container">
       <h1 id="header">Your allotted time slots</h1>
       {voucherArray.map((voucher: request.VoucherInfo, index: number) => {
         return (
@@ -34,7 +34,7 @@ const ProofOfRequestScreen = () => {
         )
       })
       }
-    </div>
+    </article>
   )
 }
 
